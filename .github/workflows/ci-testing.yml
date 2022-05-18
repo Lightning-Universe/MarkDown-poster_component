@@ -78,7 +78,7 @@ jobs:
         SLACK_CHANNEL_ID: ${{secrets.SLACK_CHANNEL_ID}}
         SLACK_TOKEN: ${{secrets.SLACK_TOKEN}}
       run: |
-        coverage run --source slack -m py.test slack tests -v --junitxml=junit/test-results-${{ runner.os }}-${{ matrix.python-version }}.xml
+        coverage run --source poster -m py.test poster tests -v --junitxml=junit/test-results-${{ runner.os }}-${{ matrix.python-version }}.xml
 
     - name: Statistics
       if: success()
