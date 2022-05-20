@@ -10,5 +10,5 @@ def test_send_message():
     thread.start()
     time.sleep(5)
     assert poster.ready
-    res = requests.get(f"http://localhost:{poster.port}")
+    res = requests.get(f"http://localhost:{poster.port}/poster.html")
     assert res.status_code == 200
