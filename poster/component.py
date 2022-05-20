@@ -8,8 +8,8 @@ logger = logging.getLogger(__name__)
 
 class Poster(L.LightningWork):
     """
-    :param port: Port address for app.
-    :param parallel: Whether the Work is parallel
+    :param resource_path: Resource directory with Markdown file.
+    :param parallel: Whether the Work is parallel.
     """
 
     def __init__(
