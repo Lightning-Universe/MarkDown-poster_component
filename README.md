@@ -45,3 +45,4 @@ cd markdown-poster
 pip install -r requirements.txt
 pip install -e .
 ```
+> **Note**: [This component isn't compatible with Windows](https://github.com/patrick-kidger/mkposters#assumptions).
