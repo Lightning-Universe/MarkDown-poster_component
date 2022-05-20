@@ -17,9 +17,9 @@ class Poster(L.LightningWork):
     def __init__(
             self,
             resource_dir: str,
-            code_style="github",
-            background_color="#F6F6EF",
-            parallel=True,
+            code_style: str = "github",
+            background_color: str = "#F6F6EF",
+            parallel: bool = True,
     ):
         super().__init__(parallel=parallel)
         self.resource_dir = resource_dir
