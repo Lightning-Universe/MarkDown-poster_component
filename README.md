@@ -11,7 +11,7 @@ ______________________________________________________________________
 </div>
 
 # About
-This component lets you render Markdown page to the Lightning app.
+This component lets you make posters from Markdown files to the Lightning app.
 
 
 ----
