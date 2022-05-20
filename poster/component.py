@@ -1,51 +1,35 @@
 import logging
+
 import lightning as L
+from mkposters import mkposter
 
-from slack_sdk import WebClient
-from slack_sdk.errors import SlackApiError
+logger = logging.getLogger(__name__)
 
 
-class SlackMessenger(L.LightningFlow):
-    def __init__(self, token, channel_id) -> None:
-        """
-        Sends a message to a specific slack channel.
-        To enable this:
-        1. visit https://api.slack.com/apps
-        2. create an app
-        3. install the app in your workspace
+class Poster(L.LightningWork):
+    """
+    :param port: Port address for app.
+    :param parallel: Whether the Work is parallel
+    """
 
-        Example:
+    def __init__(
+            self,
+            resource_path: str,
+            code_style="github",
+            background_color="#F6F6EF",
+            parallel=True,
+    ):
+        super().__init__(parallel=parallel)
+        self.resource_path = resource_path
+        self.code_style = code_style
+        self.background_color = background_color
+        self.ready = False
 
-        .. code:: python
-
-            import lightning as L
-            from slack import SlackMessenger
-
-            class YourComponent(L.LightningFlow):
-                def __init__(self):
-                    super().__init__()
-                    self.slack_messenger = SlackMessenger(token='a-long-token', channel_id='A03CB4A6AK7')
-
-                def run(self):
-                    self.slack_messenger.run('hello from ⚡ lit slack ⚡')
-
-        token: "Bot User OAuth Token" found under https://api.slack.com/apps/YOUR-APP_ID/install-on-team
-        channel_id: Open slack > find a channel > get channel details > copy channel ID at the bottom
-
-        """
-        super().__init__()
-        self.channel_id = channel_id
-        self.token = token
-
-    def run(self, message):
-        try:
-            # Call the conversations.list method using the WebClient
-            client = WebClient(token=self.token)
-            result = client.chat_postMessage(
-                channel=self.channel_id,
-                text=message
-            )
-            return result
-
-        except SlackApiError as e:
-            print(f"Error: {e}")
+    def run(self):
+        self.ready = True
+        mkposter(
+            datadir=self.resource_path,
+            background_color=self.background_color,
+            code_style=self.code_style,
+            port=self.port,
+        )

@@ -11,7 +11,7 @@ ______________________________________________________________________
 </div>
 
 # About
-This component lets you send a message on Slack from a Lightning app.
+This component lets you render Markdown page to the Lightning app.
 
 
 ----
@@ -21,15 +21,15 @@ This component lets you send a message on Slack from a Lightning app.
 <!---:lai-use:--->
 ```python
 import lightning as L
-from slack import SlackMessenger
+from poster import Poster
 
 class YourComponent(L.LightningFlow):
     def __init__(self):
         super().__init__()
-        self.slack_messenger = SlackMessenger(token='a-long-token', channel_id='A03CB4A6AK7')
+        self.poster = Poster(resource_path="resources/poster.md")
 
     def run(self):
-        self.slack_messenger.run('hello from ⚡ lit slack ⚡')
+        self.poster.run()
 ```
 
 ## install
@@ -37,8 +37,8 @@ Use these instructions to install:
 
 <!---:lai-install:--->
 ```bash
-git clone https://github.com/PyTorchLightning/LAI-slack-messenger.git
-cd LAI-slack-messenger
+git clone https://github.com/PyTorchLightning/markdown-poster.git
+cd markdown-poster
 pip install -r requirements.txt
 pip install -e .
 ```

@@ -1,1 +1,1 @@
-from poster.component import SlackMessenger
+from poster.component import Poster
