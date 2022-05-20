@@ -5,7 +5,7 @@ from poster.component import Poster
 
 
 def test_send_message():
-    poster = Poster(resource_path="resources")
+    poster = Poster(resource_dir="resources")
     thread = Thread(target=poster.run, daemon=True)
     thread.start()
     time.sleep(5)

@@ -6,7 +6,7 @@ from poster import Poster
 class YourComponent(L.LightningFlow):
     def __init__(self):
         super().__init__()
-        self.poster = Poster(resource_path="resources")
+        self.poster = Poster(resource_dir="resources")
 
     def run(self):
         self.poster.run()

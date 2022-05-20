@@ -26,7 +26,8 @@ from poster import Poster
 class YourComponent(L.LightningFlow):
     def __init__(self):
         super().__init__()
-        self.poster = Poster(resource_path="resources")
+        # provide the directory containing the Markdown file.
+        self.poster = Poster(resource_dir="resources")
 
     def run(self):
         self.poster.run()
