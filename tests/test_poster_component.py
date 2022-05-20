@@ -1,11 +1,13 @@
-import os
-from poster.component import SlackMessenger
+from threading import Thread
+import time
+import requests
+from poster.component import Poster
 
 
 def test_send_message():
-    token = os.environ['SLACK_TOKEN']
-    channel_id = os.environ['SLACK_CHANNEL_ID']
-
-    messenger = SlackMessenger(token=token, channel_id=channel_id)
-    result = messenger.run('test from CI/CD')
-    assert result.status_code == 200
+    poster = Poster(resource_path="resources")
+    thread = Thread(target=poster.run, daemon=True)
+    thread.start()
+    time.sleep(2)
+    res = requests.get(f"http://localhost:{poster.port}")
+    assert res.status_code == 200
