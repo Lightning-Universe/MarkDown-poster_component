@@ -30,6 +30,9 @@ class YourComponent(L.LightningFlow):
 
     def run(self):
         self.poster.run()
+    
+    def configure_layout(self):
+        return {"name": "Poster", "content": self.poster.url + "/poster.html"}
 ```
 
 ## install
