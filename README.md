@@ -3,7 +3,7 @@
 <div align="center">
 <img src="https://pl-bolts-doc-images.s3.us-east-2.amazonaws.com/lai.png" width="200px">
 
-A Lightning component to send a message on Slack
+A Lightning component to make Markdown Poster
 ______________________________________________________________________
 
 ![Tests](https://github.com/PyTorchLightning/LAI-slack-messenger/actions/workflows/ci-testing.yml/badge.svg)
@@ -11,7 +11,7 @@ ______________________________________________________________________
 </div>
 
 # About
-This component lets you make posters from Markdown files to the Lightning app.
+This component lets you make posters from Markdown to the Lightning app.
 
 
 ----
