@@ -15,8 +15,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-20.04, macOS-10.15, windows-2019]
-        python-version: [3.7]
+        os: [ubuntu-20.04, macOS-10.15]
+        python-version: [3.8]
 
     # Timeout: https://stackoverflow.com/a/59076067/4521646
     timeout-minutes: 35
@@ -74,11 +74,8 @@ jobs:
       shell: bash
 
     - name: Tests
-      env:
-        SLACK_CHANNEL_ID: ${{secrets.SLACK_CHANNEL_ID}}
-        SLACK_TOKEN: ${{secrets.SLACK_TOKEN}}
       run: |
-        coverage run --source slack -m py.test slack tests -v --junitxml=junit/test-results-${{ runner.os }}-${{ matrix.python-version }}.xml
+        coverage run --source poster -m py.test poster tests -v --junitxml=junit/test-results-${{ runner.os }}-${{ matrix.python-version }}.xml
 
     - name: Statistics
       if: success()

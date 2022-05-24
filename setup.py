@@ -3,13 +3,12 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='slack',
-    version='0.0.0',
-    description='Describe Your Cool Component',
-    author='',
-    author_email='',
-    # REPLACE WITH YOUR OWN GITHUB PROJECT LINK
-    url='https://github.com/PyTorchLightning/lightning-component-template',
+    name="markdown-poster",
+    version="0.0.1",
+    description="Render Markdowns in your Lightning app",
+    author="Grid.ai",
+    author_email="",
+    url="https://github.com/PyTorchLightning/markdown-poster",
     install_requires=[],
     packages=find_packages(),
 )
