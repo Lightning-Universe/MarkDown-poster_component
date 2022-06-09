@@ -5,7 +5,7 @@
 
 A Lightning component to create Markdown Poster
 
-<img src="https://github.com/PyTorchLightning/markdown-poster/raw/main/resources/preview.png">
+<img src="https://github.com/PyTorchLightning/markdown-poster/raw/main/resources/preview.jpeg">
 
 ______________________________________________________________________
 
