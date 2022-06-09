@@ -19,16 +19,14 @@ class Poster(L.LightningWork):
             resource_dir: str,
             code_style: str = "github",
             background_color: str = "#F6F6EF",
-            parallel: bool = True,
+            **kwargs
     ):
-        super().__init__(parallel=parallel)
+        super().__init__(parallel=True, **kwargs)
         self.resource_dir = resource_dir
         self.code_style = code_style
         self.background_color = background_color
-        self.ready = False
 
     def run(self):
-        self.ready = True
         mkposter(
             datadir=self.resource_dir,
             background_color=self.background_color,
