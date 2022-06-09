@@ -51,7 +51,7 @@ Use these instructions to install:
 
 #### Lightning CLI
 
-```lightning install component lightning/markdown-poster```
+```lightning install component lightning/lit-markdown-poster```
 
 #### Manual
 
