@@ -4,6 +4,9 @@
 <img src="https://pl-bolts-doc-images.s3.us-east-2.amazonaws.com/lai.png" width="200px">
 
 A Lightning component to create Markdown Poster
+
+<img src="https://github.com/PyTorchLightning/markdown-poster/raw/main/resources/preview.png">
+
 ______________________________________________________________________
 
 ![Tests](https://github.com/PyTorchLightning/LAI-slack-messenger/actions/workflows/ci-testing.yml/badge.svg)
@@ -46,8 +49,8 @@ if __name__ == '__main__':
 
 Use these instructions to install:
 
-
 #### Lightning CLI
+
 ```lightning install component lightning/markdown-poster```
 
 #### Manual
