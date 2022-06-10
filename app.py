@@ -7,7 +7,7 @@ from poster import Poster
 class CustomPosterApp(L.LightningFlow):
     def __init__(self):
         super().__init__()
-        self.poster = Poster(resource_dir="resources", cloud_compute=CloudCompute("cpu", 1))
+        self.poster = Poster(resource_dir="resources", cloud_compute=CloudCompute())
 
     def run(self):
         self.poster.run()
