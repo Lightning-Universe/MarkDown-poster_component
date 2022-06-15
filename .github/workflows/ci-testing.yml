@@ -57,12 +57,12 @@ jobs:
         ref: 'master'
         path: lightning
 
-    - name: Install Lightning
-      run: |
-        cd lightning
-        pip install -r requirements.txt
-        pip install -e .
-      shell: bash
+#    - name: Install Lightning
+#      run: |
+#        cd lightning
+#        pip install -r requirements.txt
+#        pip install -e .
+#      shell: bash
 
     - name: Install dependencies
       run: |
