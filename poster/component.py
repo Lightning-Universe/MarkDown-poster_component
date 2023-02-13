@@ -14,13 +14,7 @@ class Poster(L.LightningWork):
     :param parallel: Whether the Work is parallel.
     """
 
-    def __init__(
-            self,
-            resource_dir: str,
-            code_style: str = "github",
-            background_color: str = "#F6F6EF",
-            **kwargs
-    ):
+    def __init__(self, resource_dir: str, code_style: str = "github", background_color: str = "#F6F6EF", **kwargs):
         super().__init__(parallel=True, **kwargs)
         self.resource_dir = resource_dir
         self.code_style = code_style

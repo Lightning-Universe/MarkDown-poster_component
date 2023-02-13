@@ -15,5 +15,5 @@ class CustomPosterApp(L.LightningFlow):
         return {"name": "Poster", "content": self.poster.url + "/poster.html"}
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app = L.LightningApp(CustomPosterApp())

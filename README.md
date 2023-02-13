@@ -19,8 +19,7 @@ ______________________________________________________________________
 
 This component lets you make posters from Markdown to the Lightning app.
 
-
-----
+______________________________________________________________________
 
 ## Use the component
 
@@ -43,7 +42,7 @@ class CustomPosterApp(L.LightningFlow):
         return {"name": "Poster", "content": self.poster.url + "/poster.html"}
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app = L.LightningApp(CustomPosterApp())
 ```
 
@@ -53,7 +52,7 @@ Use these instructions to install:
 
 #### Lightning CLI
 
-```lightning install component lightning/lit-markdown-poster```
+`lightning install component lightning/lit-markdown-poster`
 
 #### Manual
 

@@ -1,6 +1,8 @@
-from threading import Thread
 import time
+from threading import Thread
+
 import requests
+
 from poster.component import Poster
 
 
