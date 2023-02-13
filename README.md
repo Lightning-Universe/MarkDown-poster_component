@@ -9,7 +9,9 @@ A Lightning component to create Markdown Poster
 
 ______________________________________________________________________
 
-![Tests](https://github.com/PyTorchLightning/LAI-slack-messenger/actions/workflows/ci-testing.yml/badge.svg)
+[![Lightning](https://img.shields.io/badge/-Lightning-792ee5?logo=pytorchlightning&logoColor=white)](https://lightning.ai)
+![license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
+[![CI testing](https://github.com/Lightning-Universe/MarkDown-poster_component/actions/workflows/ci-testing.yml/badge.svg?event=push)](https://github.com/Lightning-Universe/MarkDown-poster_component/actions/workflows/ci-testing.yml)
 
 </div>
 
@@ -58,7 +60,6 @@ Use these instructions to install:
 ```bash
 git clone https://github.com/PyTorchLightning/markdown-poster.git
 cd markdown-poster
-pip install -r requirements.txt
 pip install -e .
 ```
 
