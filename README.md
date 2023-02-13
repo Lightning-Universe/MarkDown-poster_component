@@ -60,7 +60,6 @@ Use these instructions to install:
 ```bash
 git clone https://github.com/PyTorchLightning/markdown-poster.git
 cd markdown-poster
-pip install -r requirements.txt
 pip install -e .
 ```
 
