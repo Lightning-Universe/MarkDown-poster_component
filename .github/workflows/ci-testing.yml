@@ -37,10 +37,7 @@ jobs:
       shell: bash
 
     - name: Tests
-      run: |
-        coverage run --source poster -m py.test poster tests -v --junitxml=junit/test-results-${{ runner.os }}-${{ matrix.python-version }}.xml
+      run: coverage run --source poster -m pytest poster tests -v
 
     - name: Statistics
-      if: success()
-      run: |
-        coverage report
+      run: coverage report
