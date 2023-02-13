@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+
 from pkg_resources import parse_requirements
 from setuptools import find_packages, setup
 
