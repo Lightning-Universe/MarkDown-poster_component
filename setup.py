@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import os
-from importlib.util import spec_from_file_location, module_from_spec
+from importlib.util import module_from_spec, spec_from_file_location
 
 from pkg_resources import parse_requirements
 from setuptools import find_packages, setup
