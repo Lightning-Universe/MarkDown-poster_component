@@ -1,12 +1,12 @@
 import logging
 
-import lightning as L
+from lightning import LightningWork
 from mkposters import mkposter
 
 logger = logging.getLogger(__name__)
 
 
-class Poster(L.LightningWork):
+class Poster(LightningWork):
     """
     :param resource_dir: The directory containing the Markdown file.
     :param code_style: The style of code blocks.
