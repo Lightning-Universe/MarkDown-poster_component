@@ -21,10 +21,10 @@ jobs:
     uses: Lightning-AI/utilities/.github/workflows/check-package.yml@main
     with:
       actions-ref: main
-      import-name: "pl_sandbox"
+      import-name: "poster"
       artifact-name: dist-packages-${{ github.sha }}
       testing-matrix: |
         {
           "os": ["ubuntu-latest", "macos-latest", "windows-latest"],
-          "python-version": ["3.8]
+          "python-version": ["3.8"]
         }
