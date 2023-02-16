@@ -1,2 +1,2 @@
-mkposters @ git+https://github.com/stanbiryukov/mkposters@522858cfe06d5438094302ff3d5c8b9256a5a4de
+mkposters @ https://github.com/stanbiryukov/mkposters/archive/522858cfe06d5438094302ff3d5c8b9256a5a4de.zip
 lightning>=1.9.0, <2.0.0
