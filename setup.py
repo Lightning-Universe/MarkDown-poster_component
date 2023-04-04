@@ -21,6 +21,8 @@ def _load_requirements(path_dir: str = _PATH_ROOT, file_name: str = "requirement
 
 
 about = _load_py_module("__about__.py")
+with open(os.path.join(_PATH_ROOT, "README.md"), encoding="utf-8") as fo:
+    readme = fo.read()
 
 
 setup(
@@ -32,4 +34,6 @@ setup(
     url=about.__homepage__,
     install_requires=_load_requirements(),
     packages=find_packages(),
+    long_description=readme,
+    long_description_content_type="text/markdown",
 )
