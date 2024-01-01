@@ -1,2 +1,2 @@
 mkposters @ https://github.com/stanbiryukov/mkposters/archive/522858cfe06d5438094302ff3d5c8b9256a5a4de.zip
-lightning>=1.9.0, <3.0.0
+lightning[app] >=2.1.0, <2.2.0
