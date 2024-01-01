@@ -1,4 +1,4 @@
-from lightning.app import LightningFlow, LightningApp, CloudCompute
+from lightning.app import CloudCompute, LightningApp, LightningFlow
 
 from poster import Poster
 
