@@ -26,11 +26,11 @@ ______________________________________________________________________
 <!---:lai-use:--->
 
 ```python
-import lightning as L
+from lightning.app import LightningFlow, LightningApp
 from poster import Poster
 
 
-class CustomPosterApp(L.LightningFlow):
+class CustomPosterApp(LightningFlow):
     def __init__(self):
         super().__init__()
         self.poster = Poster(resource_dir="resources")
@@ -43,7 +43,7 @@ class CustomPosterApp(L.LightningFlow):
 
 
 if __name__ == "__main__":
-    app = L.LightningApp(CustomPosterApp())
+    app = LightningApp(CustomPosterApp())
 ```
 
 ## install

@@ -1,6 +1,6 @@
 import logging
 
-from lightning import LightningWork
+from lightning.app import LightningWork
 from mkposters import mkposter
 
 logger = logging.getLogger(__name__)

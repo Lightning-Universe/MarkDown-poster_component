@@ -49,13 +49,12 @@ graph LR
 ### Available at : [lightning/markdown-poster](https://github.com/PyTorchLightning/markdown-poster)
 
 ```python
-import lightning as L
-from lightning import CloudCompute
+from lightning.app import LightningFlow, LightningApp, CloudCompute
 
 from poster import Poster
 
 
-class CustomPosterApp(L.LightningFlow):
+class CustomPosterApp(LightningFlow):
     def __init__(self):
         super().__init__()
         self.poster = Poster(
@@ -70,7 +69,7 @@ class CustomPosterApp(L.LightningFlow):
 
 
 if __name__ == "__main__":
-    app = L.LightningApp(CustomPosterApp())
+    app = LightningApp(CustomPosterApp())
 ```
 
 Run `lightning run app app.py` in the terminal to launch this app.
